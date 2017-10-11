@@ -1,0 +1,15 @@
+We attempted to do the Strongly connected component problem using the 
+twitter example. Our goal is to count the number of subgroups that are
+connected to each other (strongly connected component) in the graph.
+We would read in a file with two usernames.  The first
+name means that there is a pointer from the user to the next name (user).
+We have a hashtable to hold all of the twitter users.  Our loadGraph 
+function would read in the file and load all the users into the graph, 
+as well as update their pointers.  We would use the DFS search and 
+DFSvisit to traverse the graph and mark all visited nodes.  We would add
+all visited nodes into the finished stack.. Afterwards, we would call
+flip to reverse all the arrows in the graph.  Then, we would call 
+the DFS and DFSvisit again in order to split up the graph into subgroups.
+We would increment whenever a node is popped (that isn't visited) in DFS
+.  In the end, we would print out the total number of subgroups to the
+console.
